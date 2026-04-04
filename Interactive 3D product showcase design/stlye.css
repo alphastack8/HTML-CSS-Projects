@@ -1,0 +1,76 @@
+body {
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: rgb(250, 247, 247);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    /* Yeh zaroori hai 3D effect ke liye */
+    perspective: 1000px;
+}
+
+.product-card {
+    width: 320px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+/* Hover karne par rotate hoga */
+.container:hover .product-card {
+    transform: rotateY(15deg) rotateX(10deg);
+}
+
+.product-card img {
+    width: 100%;
+    transform: translateZ(50px); /* Image card se bahar nikalti hui lagegi */
+    transition: 0.5s;
+}
+
+.product-card h2 {
+    transform: translateZ(30px);
+}
+/* Animation define karein */
+@keyframes floating {
+    0% { transform: translateZ(50px) translateY(0px); }
+    50% { transform: translateZ(50px) translateY(-15px); }
+    100% { transform: translateZ(50px) translateY(0px); }
+}
+
+/* Isse Image par apply karein */
+.product-card img {
+    width: 100%;
+    transform: translateZ(50px);
+    transition: 0.5s;
+    animation: floating 3s ease-in-out infinite; /* Ye line add karein */
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #232946 0%, #0f172a 100%);
+}
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none; /* Taake button click karne mein masla na ho */
+    border-radius: 20px;
+}
