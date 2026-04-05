@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.background {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Gradient color matching the image */
+    background: linear-gradient(45deg, #4ed3e4, #c927f1);
+}
+
+.login-container {
+    background: #fff;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ebebeb;
+    padding: 5px 0;
+}
+
+.input-wrapper i {
+    color: #adadad;
+    margin-right: 10px;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 15px;
+}
+
+.forgot-pass {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 30px 0;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #4ed3e4, #c927f1);
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.social-login p, .signup-link p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.fb { background: #3b5998; }
+.tw { background: #1da1f2; }
+.gg { background: #ea4335; }
+
+.signup-link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
